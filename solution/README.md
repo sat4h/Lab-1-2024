@@ -149,12 +149,16 @@ PutElasticsearchHttp
 
 ![image](https://github.com/user-attachments/assets/095714ff-2649-424b-ac3f-c1ff6cb0872c)
 
-А вот и мои любимые ошибки, их было очень много, пришлось искать помощь ._.
+А вот и мои любимые ошибки, их было очень много, пришлось искать помощь ._., что то пришлось в документациях искать...
 
 ![image](https://github.com/user-attachments/assets/1497446b-e991-494c-a364-96bc693f5f40)
+![image](https://github.com/user-attachments/assets/9d7d77db-68cf-4daa-a699-7590bdd29e89)
+
 
  - Очень много проблем с переполнением памяти
  - То Nifi просто не работал после перезагрузки, он вроде запущен, но localhost не отвечал
+![image](https://github.com/user-attachments/assets/5bd2cb89-b35d-41d4-91ef-2888d73d17c9)
+
  - Nifi зависал очень часто
  - Трудности были с обработкой строк
  - 
