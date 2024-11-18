@@ -69,6 +69,7 @@ git clone https://github.com/ssau-data-engineering/Prerequisites.git
 ![image](https://github.com/user-attachments/assets/41eaed57-c69b-4a4a-aa2f-3ba4910b417f)
 
 ### Лабораторная работа №1 "Базовый пайплайн работы с данными"
+## Реализация пайплайна
 
 Используя DAG нужно реализовать пайплайн обработки данных, в файлах csv. Схема пайплайна:
 
@@ -84,6 +85,8 @@ etl_task_process: Обрабатывает очищенные данные.
 
 Все данные находятся в папке [data](https://github.com/sat4h/Lab-1-2024/tree/aea247556efc95ceaf28fddca0fbe6624d88fa8e/data).
 
+## Airflow
+
 Переходим в airflow... Здесь есть у нас уже dag (Я его уже запустил на этапе оформления отчета). Если его не получается найти, можно отсортировать по Owner.
 
 ![image](https://github.com/user-attachments/assets/b06e42d4-8719-47a6-b414-eb4813044f7a)
@@ -92,9 +95,11 @@ etl_task_process: Обрабатывает очищенные данные.
 
 ![image](https://github.com/user-attachments/assets/02d9160d-f6ae-4b1b-b25e-82f12f92b0eb)
 
-После того как все пройдет удачно, можно перейти в ElasticSearch. Создаем Index Pattern для wines
+После того как все пройдет удачно, можно перейти в ElasticSearch.
 ![image](https://github.com/user-attachments/assets/400616d8-6f33-42ec-8f49-f74995281a0f)
-Все прошло успешно, переходим к добавлению Index Pattern.
+
+## ElasticSearch
+Все прошло успешно, переходим к созданию Index Pattern для wines.
 ![image](https://github.com/user-attachments/assets/d169582c-e690-430b-8f69-405fd4d7266d)
 
 затем в консоли Dev Tools прописываем:
