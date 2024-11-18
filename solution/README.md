@@ -82,7 +82,7 @@ etl_task_load: Загружает данные.
 etl_task_clean: Очищает загруженные данные.
 etl_task_process: Обрабатывает очищенные данные.
 
-Все данные находятся в папке [data]([data](https://github.com/sat4h/Lab-1-2024/tree/aea247556efc95ceaf28fddca0fbe6624d88fa8e/data)).
+Все данные находятся в папке [data](https://github.com/sat4h/Lab-1-2024/tree/aea247556efc95ceaf28fddca0fbe6624d88fa8e/data).
 
 Переходим в airflow... Здесь есть у нас уже dag (Я его уже запустил на этапе оформления отчета). Если его не получается найти, можно отсортировать по Owner.
 
