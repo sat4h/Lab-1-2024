@@ -92,14 +92,24 @@ etl_task_process: Обрабатывает очищенные данные.
 
 ![image](https://github.com/user-attachments/assets/02d9160d-f6ae-4b1b-b25e-82f12f92b0eb)
 
-После того как все пройдет удачно, можно перейти в ElasticSearch и в консоли Dev Tools 
+После того как все пройдет удачно, можно перейти в ElasticSearch. Создаем Index Pattern для wines
 
-'''
+![image](https://github.com/user-attachments/assets/d169582c-e690-430b-8f69-405fd4d7266d)
+
+затем в консоли Dev Tools прописываем:
+
+```
 GET /wines/_search
 {
   "query": {
     "match_all": {}
   }
 }
-'''
+```
+
+![image](https://github.com/user-attachments/assets/331d61df-a14a-4ab5-9906-e8981a9adf4d)
+
+И теперь в Dashboard можно построить график по полученным данным. На скрине построен график points/price
+
+![image](https://github.com/user-attachments/assets/1f7b2d48-97fe-49bd-9419-a5df2cae303c)
 
