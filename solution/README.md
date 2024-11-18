@@ -31,7 +31,6 @@ git clone https://github.com/ssau-data-engineering/Prerequisites.git
  ```
 4. Далее, перед запуском контейнеров, была выполнена последовательнось команд:
 
-
 ```bash
     docker network create data-engineering-labs-network
 ```
@@ -119,3 +118,47 @@ GET /wines/_search
 
 ![image](https://github.com/user-attachments/assets/1f7b2d48-97fe-49bd-9419-a5df2cae303c)
 
+## APACHE NIFI
+
+В Apache Nifi был реализован пайплайн с помощью схемы. Для реализации пайплайна достаточно следующих процессоров:
+
+GetFile
+
+SplitRecord
+
+QueryRecord
+
+UpdateRecord
+
+MergeContent
+
+PutFile
+
+PutElasticsearchHttp
+
+Общая схема:
+
+![image](https://github.com/user-attachments/assets/6042e4c7-56ba-4013-a4ef-272195ee0692)
+
+Данные были загружены в nifi/data/
+
+Параметры GetFile, установим так же input directory с данными.
+![image](https://github.com/user-attachments/assets/09f908a1-4c17-40ce-b282-fcb97211088b)
+
+А так же указать местоположение для нового файла в PutFile
+
+![image](https://github.com/user-attachments/assets/095714ff-2649-424b-ac3f-c1ff6cb0872c)
+
+А вот и мои любимые ошибки, их было очень много, пришлось искать помощь ._.
+
+![image](https://github.com/user-attachments/assets/1497446b-e991-494c-a364-96bc693f5f40)
+
+ - Очень много проблем с переполнением памяти
+ - То Nifi просто не работал после перезагрузки, он вроде запущен, но localhost не отвечал
+ - Nifi зависал очень часто
+ - Трудности были с обработкой строк
+ - 
+   Ну и вообще интерфейс мне не очень понравился.
+Рестартим --> Запускаем пайплайн Рестартим --> Запускаем пайплайн --> Рестартим --> Запускаем пайплайн, дожидаемся окончания работы, мой долгожданный файл оказался в /data/data2. Пайплайн сохранил [здесь](
+
+Могу сказать, что Apache Nifi мне вообще не понравился, лучше с кодом повозиться :)
