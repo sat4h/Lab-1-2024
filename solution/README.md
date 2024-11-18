@@ -93,7 +93,8 @@ etl_task_process: Обрабатывает очищенные данные.
 ![image](https://github.com/user-attachments/assets/02d9160d-f6ae-4b1b-b25e-82f12f92b0eb)
 
 После того как все пройдет удачно, можно перейти в ElasticSearch. Создаем Index Pattern для wines
-
+![image](https://github.com/user-attachments/assets/400616d8-6f33-42ec-8f49-f74995281a0f)
+Все прошло успешно, переходим к добавлению Index Pattern.
 ![image](https://github.com/user-attachments/assets/d169582c-e690-430b-8f69-405fd4d7266d)
 
 затем в консоли Dev Tools прописываем:
