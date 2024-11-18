@@ -122,23 +122,17 @@ GET /wines/_search
 
 В Apache Nifi был реализован пайплайн с помощью схемы. Для реализации пайплайна достаточно следующих процессоров:
 
-GetFile
-
-SplitRecord
-
-QueryRecord
-
-UpdateRecord
-
-MergeContent
-
-PutFile
-
-PutElasticsearchHttp
+- GetFile
+- SplitRecord
+- QueryRecord
+- UpdateRecord
+- MergeContent
+- PutFile
+- PutElasticsearchHttp
 
 Общая схема:
 
-![image](https://github.com/user-attachments/assets/6042e4c7-56ba-4013-a4ef-272195ee0692)
+![image](https://github.com/user-attachments/assets/cff680e8-e1da-40fb-9bd0-335b2af02e65)
 
 Данные были загружены в nifi/data/
 
@@ -154,15 +148,17 @@ PutElasticsearchHttp
 ![image](https://github.com/user-attachments/assets/1497446b-e991-494c-a364-96bc693f5f40)
 ![image](https://github.com/user-attachments/assets/9d7d77db-68cf-4daa-a699-7590bdd29e89)
 
-
+ - Для корректной отправки наших данных в ElasticSearch, было добавлено в Client Service значение
+ElasticSearchClientServiceImpl
  - Очень много проблем с переполнением памяти
  - То Nifi просто не работал после перезагрузки, он вроде запущен, но localhost не отвечал
 ![image](https://github.com/user-attachments/assets/5bd2cb89-b35d-41d4-91ef-2888d73d17c9)
 
- - Nifi зависал очень часто
- - Трудности были с обработкой строк
- - 
-   Ну и вообще интерфейс мне не очень понравился.
-Рестартим --> Запускаем пайплайн Рестартим --> Запускаем пайплайн --> Рестартим --> Запускаем пайплайн, дожидаемся окончания работы, мой долгожданный файл оказался в /data/data2. Пайплайн сохранил [здесь](
+ - Nifi зависал очень часто 
+![image](https://github.com/user-attachments/assets/279547e9-ea25-4086-af37-a14a72994694)
 
-Могу сказать, что Apache Nifi мне вообще не понравился, лучше с кодом повозиться :)
+ - Были некоторые трудности были с обработкой строк
+ - Ну и вообще интерфейс мне не очень понравился.
+Рестартим --> Запускаем пайплайн Рестартим --> Запускаем пайплайн --> Рестартим --> Запускаем пайплайн, дожидаемся окончания работы, мой долгожданный файл оказался в /data/data2. Пайплайн сохранил [здесь](nifi_lr1_ion.xml)
+
+Могу сказать, что Apache Nifi мне вообще не понравился, с ним очень много проблем. Apache Airflow оказался проще, скорее всего я даже буду использовать его в дальнейшнем.
